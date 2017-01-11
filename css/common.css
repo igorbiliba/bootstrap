@@ -122,8 +122,8 @@
 #content {
     margin: 0;
     padding: 0;
-    padding-top: 40px;
-    padding-bottom: 40px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 }
 
 h2 {
@@ -173,11 +173,14 @@ h2 {
     border-top-right-radius: 5px;
 }
 
-#photo-source-body {
-    
+.photo-source-body {
+    overflow: hidden;
+    overflow-y: scroll;
+    width: 600px;
+    height: 560px;
 }
 
-#photo-source-body .item {
+.photo-source-body .item {
     float: left;
     height: 125px;
     width: 125px;
@@ -185,16 +188,16 @@ h2 {
     cursor: -webkit-grab;
 }
 
-#photo-source-body .item:hover {
+.photo-source-body .item:hover {
     opacity: 0.5;
 }
 
-#photo-source-body .item img {
+.photo-source-body .item img {
     width: 100%;
     height: 100%;
 }
 
-#photo-source-body .item#btn-upload {
+.photo-source-body .item#btn-upload {
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0,0,0,0.5);
     border-radius: 5px;
@@ -253,20 +256,76 @@ h2 {
 }
 
 #constructor .item .close {
-    /*display: none;*/
+    display: none;
     cursor: pointer;
     background-image: url(/img/close.png);
     background-repeat: no-repeat;
-    width: 27px;
-    height: 25px;
-    display: block;
+    width: 25px;
+    height: 27px;
     position: relative;
     z-index: 1001;
     top: -100%;
+    opacity: 0.5;
+}
+
+#constructor .full:hover .close {
+    display: block;
+}
+
+#constructor .item .close:hover {
+    opacity: 0.9;
 }
 
 #constructor .item img {
     height: 100%;
     width: 100%;
     border-radius: 5px;    
+}
+
+.btn {
+    width: 288px;
+    height: 52px;
+    font-size: 20px;
+    color: #E5A10F;
+    border: 2px solid #E5A10F;
+    text-align: center;
+    line-height: 37px;
+}
+
+.btn.fill {
+    background-color: #E5A10F;
+    color: #fff;
+}
+
+#footer {
+    height: 130px;
+    border-top: 1px solid #F1F1F1;
+}
+
+#footer .item {
+    line-height: 130px;
+}
+
+#footer span {
+    font-size: 16px;
+    color: #969696;
+}
+
+.footer-insta-lnk {
+    margin-left: 7px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: 0; 
+    border-radius: 5px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgb(168, 168, 168);
+    width: 5px;
 }
