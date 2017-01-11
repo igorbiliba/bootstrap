@@ -99,6 +99,7 @@
     margin-top: 23px;
     margin-left: -7px;
     text-align: center;
+    cursor: pointer;
 }
 
 .arrow-right {
@@ -292,9 +293,20 @@ h2 {
     line-height: 37px;
 }
 
+.btn:hover {
+    background-color: #E5A10F;
+    color: #fff;
+}
+
 .btn.fill {
     background-color: #E5A10F;
     color: #fff;
+}
+
+.btn.fill:hover {
+    background-color: #E5A10F;
+    color: #E5A10F;
+    background: none;
 }
 
 #footer {
@@ -328,4 +340,8 @@ h2 {
     border-radius: 5px;
     background-color: rgb(168, 168, 168);
     width: 5px;
+}
+
+.footer-fb-lnk:hover, .footer-insta-lnk:hover {
+    opacity: 0.5;
 }
